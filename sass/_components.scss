@@ -644,3 +644,21 @@
 
     &:focus { outline: none; }
 }
+
+////////////////////////////////////////////////////////////
+// GITHUB ICON
+#github-link {
+    position: fixed;
+    z-index: 9999 !important;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2.5rem;
+    margin-right: 3.5rem;
+    
+    img {
+        width: 4em;
+        opacity: .6;
+        filter: invert(.4);
+        &:hover { opacity: 1; }
+    }
+}

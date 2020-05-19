@@ -487,6 +487,20 @@ body {
   .btn:focus {
     outline: none; }
 
+#github-link {
+  position: fixed;
+  z-index: 9999 !important;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.5rem;
+  margin-right: 3.5rem; }
+  #github-link img {
+    width: 4em;
+    opacity: .6;
+    filter: invert(0.4); }
+    #github-link img:hover {
+      opacity: 1; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
