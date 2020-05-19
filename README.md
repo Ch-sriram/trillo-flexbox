@@ -1,4 +1,4 @@
-# NATURE TOURS
+# TRILLO
 
 A template website made using SASS (SCSS) [A CSS pre-processor] with flexbox properties for a hotel business. The template is live **[here](https://trillo-ram.netlify.app/)**. The parent repository is **[here](https://github.com/Ch-sriram/css-sass)**.
 
