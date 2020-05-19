@@ -1,0 +1,145 @@
+.container {
+    max-width: 120rem;  // 1200px;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem; // TESTING
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: var(--grey-light-border);
+
+    // since .header is the parent element of the the logo, search box and user navigation.
+    display: flex;
+    
+    // since we want logo at the left extreme, search box in the middle and user-nav at the right extreme.
+    justify-content: space-between;
+
+    // We will now align items along the cross axis as follows
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around; // to control the space between the rows of the flex container.
+        height: 11rem;
+    }
+}
+
+.content {
+    display: flex;
+    
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;  // same as flex-basis: 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: var(--color-white);
+    
+    // background-color: orangered;     // TESTING
+    // height: 80rem;                   // TESTING
+
+    flex: 1; // flex-grow: 1; The element occupies the remaining space in the .content flex container.
+}
+
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--grey-light-border);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: var(--color-white);
+    box-shadow: --shadow-dark-2;
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    // background-color: greenyellow; // TESTING
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer {
+    display: none;
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-grey-dark-1);
+        text-align: center;
+        border: none;
+    
+        &__legal-text {
+            font-size: 1.2rem;
+            color: var(--color-grey-light-4);
+            width: 90%;
+            padding: 3rem;
+            
+    
+            a { 
+                display: inline-block; 
+                transition: all .2s;
+            }
+    
+            a:visited,
+            a:link,
+            a:hover,
+            a:active {
+                text-decoration: none;
+                color: var(--color-primary-light);
+            }
+    
+            a:hover {
+                transform: scale(1.2) skewY(5deg);
+                background-color: var(--color-grey-dark-1);
+                box-shadow: var(--shadow-light);
+            }
+        }
+    }
+
+}
